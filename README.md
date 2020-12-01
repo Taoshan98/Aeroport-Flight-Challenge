@@ -2,6 +2,8 @@
 
 Algoritmo PHP per il calcolo di voli al minor prezzo
 
+All'interno dello script lo user che accede al DB è `root` e non ha password.
+
 Eseguire questa query in MySql prima di eseguire lo script:
 
 ```sql
