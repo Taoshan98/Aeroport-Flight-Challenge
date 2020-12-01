@@ -110,9 +110,17 @@ if (count($seq) < 2) {
         $stops[$stop] = $arrayAirports[$stop]['nome'];
     }
 
+    $stopsText = "e comprende i seguenti scali:";
+    if (empty($stops)){
+        $stopsText = "ed è un volo diretto.";
+    }
+
+    $text = "Il costo minore per la tratta selezionata è di " . $cost[$arrival] . "€ " . $stopsText;
+
+
     $response = array(
         "stops" => $stops,
-        "text" => "Il costo minore per la tratta selezionata è di " . $cost[$arrival] . "€ e comprende i seguenti scali:",
+        "text" => $text,
     );
 }
 
