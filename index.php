@@ -25,6 +25,11 @@ include(__DIR__ . "/database/database.php");
 </nav>
 
 <div class="container ">
+    
+    <div class="text-center">
+        <img src="schemaVoli.png" width="70%" height="70%" class="img-fluid" alt="schemaVoli">
+    </div>
+
     <form method="POST">
 
         <div class="form-row">
