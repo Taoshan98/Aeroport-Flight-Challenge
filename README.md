@@ -1,4 +1,4 @@
-# Aeroport-Flight-Challenge
+# Airport-Flight-Challenge
 
 Algoritmo PHP per il calcolo di voli al minor prezzo
 Basato sull'algoritmo di Dijkstra (https://it.wikipedia.org/wiki/Algoritmo_di_Dijkstra)
