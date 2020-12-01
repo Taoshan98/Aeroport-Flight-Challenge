@@ -1,6 +1,7 @@
 # Aeroport-Flight-Challenge
 
 Algoritmo PHP per il calcolo di voli al minor prezzo
+Basat sull'algoritmo di Dijkstra (https://it.wikipedia.org/wiki/Algoritmo_di_Dijkstra)
 
 All'interno dello script lo user che accede al DB è `root` e non ha password.
 
