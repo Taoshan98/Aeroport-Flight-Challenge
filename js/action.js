@@ -10,6 +10,7 @@ $(document).on('click', "#submit", function( event ) {
             let response = '<div class="alert alert-warning" role="alert" >' + res['text'] + '</div>';
 
             if (res['stops'] !== undefined){
+
                 response = '<div class="alert alert-success" role="alert" >'
                                 + res['text'] + '<br>';
 
