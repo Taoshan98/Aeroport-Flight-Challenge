@@ -106,7 +106,7 @@ array_pop($seq);
 if (count($seq) < 2) {
 
     $stops = [];
-    foreach (array_reverse($seq) as $stop) {
+    foreach ($seq as $stop) {
         $stops[$stop] = $arrayAirports[$stop]['nome'];
     }
 
