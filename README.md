@@ -1,21 +1,20 @@
-# Airport-Flight-Challenge
+# Airport Flight Challenge
 
-Algoritmo PHP per il calcolo di voli al minor prezzo
-Basato sull'algoritmo di Dijkstra (https://it.wikipedia.org/wiki/Algoritmo_di_Dijkstra)
+## Overview
+This repository contains a PHP algorithm to calculate the lowest-cost flights between airports using **Dijkstra's Algorithm**. For more details on the algorithm, refer to [Wikipedia](https://it.wikipedia.org/wiki/Algoritmo_di_Dijkstra).
 
-All'interno dello script lo user che accede al DB è `root` e non ha password.
+## Database Configuration
+The script connects to a MySQL database using the user `root` without a password. Ensure that MySQL is running and execute the following queries to set up the database and tables before running the script.
 
-Eseguire questa query in MySql prima di eseguire lo script:
+## Database Setup
+Execute the following SQL commands in MySQL to create and populate the necessary tables.
 
 ```sql
 CREATE DATABASE `challenge`;
 
 USE `challenge`;
 
---
--- Dati per la tabella `voli`
---
-
+-- Table: voli (Flights)
 CREATE TABLE `voli` (
   `codice` varchar(5) NOT NULL,
   `id_departure` varchar(2) NOT NULL,
@@ -43,14 +42,11 @@ ALTER TABLE `voli`
   ADD PRIMARY KEY (`codice`);
 COMMIT;
 
+-- Table: aeroporti (Airports)
 CREATE TABLE `aeroporti` (
   `codice` varchar(2) NOT NULL,
   `nome` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dati per la tabella `aeroporti`
---
 
 INSERT INTO `aeroporti` (`codice`, `nome`) VALUES
 ('CA', 'Elmas, Cagliari'),
@@ -63,3 +59,17 @@ INSERT INTO `aeroporti` (`codice`, `nome`) VALUES
 ALTER TABLE `aeroporti`
   ADD PRIMARY KEY (`codice`);
 COMMIT;
+```
+
+## Usage
+1. Set up the database as described above.
+2. Run the PHP script to calculate the cheapest flight route between two given airports.
+3. The script will use Dijkstra's Algorithm to determine the optimal path.
+
+## Notes
+- Ensure that the MySQL server is running before executing the script.
+- Modify the database connection parameters if needed to match your MySQL configuration.
+- The script assumes all flight data is stored in the `voli` table and airport data in the `aeroporti` table.
+
+## Disclaimer
+This script is provided as-is without any guarantees. Use it at your own risk, and ensure you have backups before making modifications to your database.
